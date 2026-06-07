@@ -1,6 +1,6 @@
 # Fatigue Ground Balls
 
-Canvas-ready Chapter 6 fatigue practice widgets that deploy as one static GitHub Pages site.
+Canvas-ready fatigue practice widgets that deploy as a single static GitHub Pages site.
 
 The package includes:
 
