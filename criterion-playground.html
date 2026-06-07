@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practice Goodman, Gerber, and Soderberg fatigue criteria for infinite life.">
+  <title>Fatigue Criterion Playground</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="shell">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Chapter 6 · Widget 02</p>
+      <h1>Fatigue Criterion <span>Playground</span></h1>
+    </div>
+    <p class="hero-copy">Use provided endurance strength and fluctuating stress components to calculate infinite-life factor of safety.</p>
+  </header>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="fluctuating-stress.html">Fluctuating stress</a>
+    <a class="active" href="criterion-playground.html">Criteria</a>
+    <a href="finite-life-sn.html">Finite life</a>
+  </nav>
+
+  <section class="app-grid">
+    <aside class="sidebar">
+      <section class="panel panel-pad">
+        <div class="section-title"><b>01</b><div><span>Random case</span><h2 id="caseTitle">—</h2></div></div>
+        <button class="primary" id="newCase">Generate new case</button>
+        <p class="hint" id="casePrompt">—</p>
+        <div class="given-grid" id="givenGrid"></div>
+      </section>
+      <section class="panel panel-pad">
+        <div class="section-title"><b>02</b><div><span>Your calculation</span><h2>Safety checks</h2></div></div>
+        <div class="answer-grid one" id="answerGrid"></div>
+        <p class="hint">Enter the fatigue factor and the separate yielding factor of safety. Use the named fatigue criterion.</p>
+        <div class="attempt-box"><span id="attemptStatus">Attempt 1 of 3</span><button class="check-button" id="checkAnswer">Check answer</button></div>
+        <div class="feedback" id="feedback">Ready for your answer.</div>
+        <div class="equation-panel" id="equationPanel" hidden></div>
+      </section>
+    </aside>
+    <section class="main-column">
+      <section class="panel plot-panel">
+        <div class="section-title"><b>03</b><div><span>Fatigue diagram</span><h2 id="diagramTitle">Failure boundary</h2></div></div>
+        <div class="criterion-controls" id="criterionControls"></div>
+        <svg id="fatiguePlot" viewBox="0 0 760 470" role="img" aria-label="Fatigue failure diagram"></svg>
+        <div class="plot-caption"><span><b>Point</b> effective (σ<sub>m</sub>, σ<sub>a</sub>)</span><span><b>Solid boundary</b> assigned criterion</span><span><b>Dashed boundaries</b> optional comparisons</span></div>
+      </section>
+      <section class="panel panel-pad" id="solutionPanel" hidden>
+        <div class="section-title"><b>04</b><div><span>Worked solution</span><h2>Fatigue and yielding</h2></div></div>
+        <div class="solution-grid three" id="solutionGrid"></div>
+      </section>
+    </section>
+  </section>
+</main>
+<script src="fatigue.js"></script>
+<script src="criterion-playground.js"></script>
+</body>
+</html>
